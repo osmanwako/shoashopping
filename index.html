@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/*" href="images/title.jpg" />
+    <link rel="stylesheet" href="css/w3school.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>shopping system</title>
+  </head>
+  <body>
+    <header class="contentfluid">
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#about">My Cart</a></li>
+          <li><a href="#about">History</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h3 style="text-align: center">
+          shopping Product Slide images &#10094; &#10095;
+        </h3>
+        <div class="homeslide" style="max-width: 1920px">
+          <div class="divlist">
+            <img
+              class="homeslideimg"
+              src="images/slide/img_nature_wide.jpg"
+              style="width: 100%"
+            />
+            <button class="btn-left btn-pass" onclick="passimg(-1)">
+              &#10094;
+            </button>
+            <button class="btn-right btn-pass" onclick="passimg(1)">
+              &#10095;
+            </button>
+          </div>
+          <div class="divlist">
+            <img
+              class="homeslideimg"
+              src="images/slide/img_snow_wide.jpg"
+              style="width: 100%"
+            />
+            <button class="btn-left btn-pass" onclick="passimg(-1)">
+              &#10094;
+            </button>
+            <button class="btn-right btn-pass" onclick="passimg(1)">
+              &#10095;
+            </button>
+          </div>
+          <div class="divlist">
+            <img
+              class="homeslideimg"
+              src="images/slide/img_mountains_wide.jpg"
+              style="width: 100%"
+            />
+            <button class="btn-left btn-pass" onclick="passimg(-1)">
+              &#10094;
+            </button>
+            <button class="btn-right btn-pass" onclick="passimg(1)">
+              &#10095;
+            </button>
+          </div>
+        </div>
+        <script>
+          let noimg = 0;
+          function imgslider() {
+            var divlist = document.getElementsByClassName("divlist");
+            for (let i = 0; i < divlist.length; i++) {
+              divlist[i].style.display = "none";
+              if (i == noimg) {
+                divlist[i].style.display = "block";
+              }
+            }
+            noimg++;
+            if (noimg > 2) noimg = 0;
+            setTimeout(imgslider, 2000);
+          }
+          imgslider();
+          function passimg(n) {
+            noimg += n;
+            if (noimg == -1) noimg = divlist.length - 1;
+            if (noimg == divlist.length) noimg = 0;
+          }
+        </script>
+      </section>
+    </main>
+    <footer>This is footer</footer>
+  </body>
+</html>
