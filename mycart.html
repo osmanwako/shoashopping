@@ -8,65 +8,74 @@
     <title>shopping system</title>
     <link rel="stylesheet" href="css/main.css" />
     <style>
-      .container {
-        position: relative;
-        width: 30%;
-        margin: 20px;
-        float: left;
+      .mycartsection {
+        display: flex;
+        /* // position: relative; */
       }
-
-      .bottomright {
-        background-color: white;
-        position: absolute;
-        bottom: 8px;
-        right: 16px;
-        font-size: 18px;
-        color: black;
-      }
-
-      img {
+      .mycartsection div {
         width: 400px;
         height: 300px;
-        height: auto;
-        opacity: 0.3;
+        margin: 5px;
+        padding: 10px;
+        background-color: #eee;
+      }
+      .mycartsection div img {
+        width: 100%;
+        height: 100%;
       }
     </style>
   </head>
   <body>
-    <header class="contentfluid">
+    <header>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="product.html">Products</a></li>
+          <li class="position-relation">
+            <a href="javascript:void(0)">Products</a>
+            <div>
+              <a href="product.html">Computers</a>
+              <a href="furniture.html">Furnitures</a>
+              <a href="vehicles.html">Vehicles</a>
+              <a href="buoq.html">Boutiques</a>
+            </div>
+          </li>
           <li><a href="aboutus.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a class="active" href="mycart.html">My Cart</a></li>
+          <li><a class="active" href="mycart.html">My Cart </a></li>
           <li><a href="#about">History</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="container">
-        <img src="images/mycart/shoe1.jpg" alt="Cinque Terre" />
-        <div class="bottomright">1800 Birr</div>
-      </div>
-      <div class="container">
-        <img src="images/mycart/shoe1.jpg" alt="Cinque Terre" />
-        <div class="bottomright">1800 Birr</div>
-      </div>
-      <div class="container">
-        <img src="images/mycart/shoe2.jpg" alt="Cinque Terre" />
-        <div class="bottomright">1800 Birr</div>
-      </div>
-      <div class="container">
-        <img src="images/mycart/sho3.jpg" alt="Cinque Terre" />
-        <div class="bottomright">1800 Birr</div>
-      </div>
-      <div class="container">
-        <img src="images/mycart/shoe4.jpg" alt="Cinque Terre" />
-        <div class="bottomright">1800 Birr</div>
-      </div>
+      <section class="mycartsection">
+        <div>
+          <img src="images/furniture/f2.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/buoq/b1.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/vehicle/v10.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/computer/product4.jpg" alt="" />
+        </div>
+      </section>
+      <section class="mycartsection">
+        <div>
+          <img src="images/furniture/f4.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/buoq/b5.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/vehicle/v4.jpg" alt="" />
+        </div>
+        <div>
+          <img src="images/computer/product3.jpg" alt="" />
+        </div>
+      </section>
     </main>
-    <footer>This is footer</footer>
+    <footer style="text-align: center">This is footer</footer>
   </body>
 </html>

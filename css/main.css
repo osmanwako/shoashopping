@@ -1,45 +1,67 @@
 :root {
-  --picture-size: 230px;
-  --img-size: 150px;
+  --picture-size: 330px;
+  --img-size: 250px;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+header {
+  position: fixed;
+  background-color: #eee;
+  font-family: "Lato", sans-serif;
+  width: 100vw;
+}
+nav {
+  margin: 0 20px;
+}
+header nav ul {
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul li {
+  margin: 5px;
+  padding: 10px;
+}
+header nav ul li:hover {
+  background-color: #bbb;
+}
+header nav ul li a {
+  text-align: center;
+  text-decoration: none;
+}
+header nav ul li div {
+  display: none;
+}
+.position-relation {
+  position: relative;
+}
+header nav ul li:hover div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  background-color: #eee;
+  top: 40px;
+  left: 0;
+}
+header nav ul li div a {
+  margin: 2px;
+  padding: 10px;
+}
+header nav ul li div a:hover {
+  background-color: #bbb;
+}
+
 main {
   margin: 20px;
   padding: 10px;
-}
-header,
-.container {
-  background-color: #333;
-}
-header ul,
-.container ul {
-  list-style-type: none;
-  overflow: hidden;
-}
-nav {
-  margin: 5px 10px;
-}
-header ul li,
-.container ul li {
-  float: left;
-}
-.container ul li a,
-header ul li a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-li a:hover:not(.active) {
-  background-color: rgb(188, 166, 166);
-}
-.active {
-  background-color: #04aa6d;
-  border-bottom: 2px solid blue;
+  padding-top: 90px;
 }
 .section-product {
   margin: 20px;
@@ -73,8 +95,8 @@ section .picture img {
 }
 section .picture img:hover {
   border: 1px solid rgb(26, 13, 168);
-  width: 180px;
-  height: 180px;
+  width: 280px;
+  height: 280px;
 }
 #fullimagediv {
   display: none; /* Hidden by default */
@@ -172,4 +194,7 @@ section .picture img:hover {
 }
 .product:hover .product-list {
   display: block;
+}
+footer {
+  text-align: center;
 }
