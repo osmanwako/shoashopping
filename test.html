@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Down Menu</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        position: fixed;
+        background-color: #333;
+        width: 100vw;
+      }
+      nav {
+        margin-left: 20px;
+        margin-right: 20px;
+        display: block;
+      }
+      header nav ul {
+        display: flex;
+        list-style-type: none;
+      }
+      .header-menu-ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+      .header-menu-ul-li {
+        margin: 10px;
+        padding: 10px;
+        color: white;
+      }
+      header nav ul li:hover,
+      header nav ul li div a:hover {
+        background-color: rgb(61, 33, 33);
+        cursor: pointer;
+      }
+      .product-menu {
+        position: relative;
+      }
+      li div {
+        display: none;
+      }
+      header nav ul li:hover div {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 1px;
+        background-color: #333;
+        border-top: 2px solid white;
+      }
+      li div a {
+        margin: 5px;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+      }
+      main {
+        padding-top: 70px;
+        margin: 20px;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul class="header-menu-ul">
+          <li class="header-menu-ul-li"><a>Home</a></li>
+          <li class="header-menu-ul-li"><a>About</a></li>
+          <li class="header-menu-ul-li"><a>Contact</a></li>
+          <li class="header-menu-ul-li product-menu">
+            <a>Products</a>
+            <div class="header1">
+              <a>Computer</a>
+              <a>Clothes</a>
+              <a>Shoes</a>
+              <a>Furniture</a>
+            </div>
+          </li>
+          <li class="header-menu-ul-li product-menu">
+            <a>History</a>
+            <div>
+              <a href="">Price</a>
+              <a href="">Products</a>
+              <a href="">Customers</a>
+            </div>
+          </li>
+          <li class="header-menu-ul-li"><a>My cart</a></li>
+          <li class="header-menu-ul-li"><a>Price</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>This is our main</section>
+    </main>
+    <footer>this is our footer</footer>
+  </body>
+</html>
